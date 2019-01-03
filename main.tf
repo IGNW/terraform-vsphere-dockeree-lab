@@ -1,0 +1,20 @@
+module "dockeree-cluster" {
+  source                  = "github.com/IGNW/terraform-vsphere-docker-ee"
+
+  environment             = "lab"
+  vsphere_server          = "172.20.1.5"
+  vsphere_datacenter      = "pod1-hx-dc"
+  vsphere_datastore       = "Lab-Storage"
+  vsphere_compute_cluster = "pod1-hx"
+  vsphere_network         = "vm-network-40"
+  vsphere_folder          = "docker-ee"
+  vm_template             = "ubuntu16_dockeree_template"
+  domain                  = "ignw.io"
+  manager_node_count      = "2"
+  worker_node_count       = "1"
+  dtr_node_count          = "2"
+  vsphere_user            = "administrator@vsphere.local"
+  vsphere_password        = "${var.vsphere_password}"
+  terraform_password      = "${var.terraform_password}"
+  ucp_admin_password      = "${var.ucp_admin_password}"
+}
