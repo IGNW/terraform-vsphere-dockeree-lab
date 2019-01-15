@@ -8,7 +8,7 @@ module "dockeree-cluster" {
   vsphere_compute_cluster = "POC"
   vsphere_network         = "ignw-poc|vesta-devops|servers"
   vsphere_folder          = "docker-ee"
-  vm_template             = "ubuntu1604_base_template"
+  vm_template             = "ubuntu1604_dockeree_template"
   domain                  = "ignw.io"
   manager_node_count      = "2"
   worker_node_count       = "1"
