@@ -1,13 +1,13 @@
 module "dockeree-cluster" {
   source                  = "github.com/IGNW/terraform-vsphere-docker-ee"
 
-  environment             = "dev"
+  environment             = "lab"
   vsphere_server          = "10.254.252.5"
   vsphere_datacenter      = "POC-Lab"
   vsphere_datastore       = "IGNW-POC"
   vsphere_compute_cluster = "POC"
   vsphere_network         = "ignw-poc|vesta-devops|servers"
-  vsphere_folder          = "dockeree-dev"
+  vsphere_folder          = "dockeree-lab"
   vm_template           = "ubuntu1604_dockeree_template"
   domain                  = "ignw.io"
   manager_node_count      = "2"
