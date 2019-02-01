@@ -1,5 +1,5 @@
 module "dockeree-cluster" {
-  source                  = "github.com/IGNW/terraform-vsphere-docker-ee"
+  source                  = "github.com/IGNW/terraform-vsphere-docker-ee?ref=refactor_init"
 
   environment             = "lab"
   vsphere_server          = "10.254.252.5"
