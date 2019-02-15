@@ -1,5 +1,5 @@
 module "dockeree-cluster" {
-  source                  = "github.com/IGNW/terraform-vsphere-docker-ee"
+  source                  = "github.com/IGNW/terraform-vsphere-docker-ee?ref=refactor_init"
 
   environment             = "lab"
   vsphere_server          = "10.254.252.5"
@@ -10,7 +10,7 @@ module "dockeree-cluster" {
   vsphere_folder          = "dockeree-lab"
   vm_template             = "ubuntu1604_dockeree_template"
   domain                  = "ignw.io"
-  manager_node_count      = "2"
+  manager_node_count      = "3"
   worker_node_count       = "1"
   dtr_node_count          = "1"
   vsphere_user            = "administrator@vsphere.local"
