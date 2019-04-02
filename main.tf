@@ -1,16 +1,16 @@
 module "dockeree-cluster" {
-  source                  = "github.com/IGNW/terraform-vsphere-docker-ee?ref=refactor_init"
+  source                  = "github.com/IGNW/terraform-vsphere-dockeree?ref=1.0.0"
 
-  environment             = "lab"
+  environment             = "labtest"
   vsphere_server          = "10.254.252.5"
   vsphere_datacenter      = "POC-Lab"
   vsphere_datastore       = "10.254.252.23_Datastore"
   vsphere_compute_cluster = "POC"
   vsphere_network         = "ignw-poc|vesta-devops|servers"
   vsphere_folder          = "dockeree-lab"
-  vm_template             = "ubuntu1604_dockeree_template"
+  vm_template             = "centos7_template_dockeree"
   domain                  = "ignw.io"
-  manager_node_count      = "3"
+  manager_node_count      = "2"
   worker_node_count       = "1"
   dtr_node_count          = "1"
   vsphere_user            = "administrator@vsphere.local"
@@ -18,5 +18,4 @@ module "dockeree-cluster" {
   ssh_username            = "adminuser"
   ssh_password            = "${var.ssh_password}"
   ucp_admin_password      = "${var.ucp_admin_password}"
-  ucp_version             = "3.0.3"
 }
