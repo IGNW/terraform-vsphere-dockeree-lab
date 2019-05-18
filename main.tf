@@ -53,7 +53,7 @@ module "dockeree-cluster" {
   load_balancer_password     = "changeme1"
 
   use_custom_ssl             = "0"
-  ssl_ca_file                = ""
+  ssl_ca_file                = "x"
   ssl_cert_file              = ""
   ssl_key_file               = ""
 
