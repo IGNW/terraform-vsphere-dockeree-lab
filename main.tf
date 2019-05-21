@@ -4,8 +4,8 @@ module "dockeree-cluster" {
   environment                 = "dev1"
   vsphere_server              = "10.254.252.5"
   vsphere_datacenter          = "POC-Lab"
-  dtr_fqdn                    = "dtr-dev.ignw.local"
-  ucp_fqdn                    = "ucp-dev.ignw.local"
+  dtr_fqdn                    = "dtr-dev1.ignw.local"
+  ucp_fqdn                    = "ucp-dev1.ignw.local"
 
   manager_vsphere_datastore   = "10.254.252.23_Datastore"
   manager_vsphere_cluster     = "POC"
