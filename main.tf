@@ -1,11 +1,11 @@
 module "dockeree-cluster" {
   source                      = "git@github.com:IGNW/terraform-vsphere-dockeree?ref=vesta"
 
-  environment                 = "csnow"
+  environment                 = "dev1"
   vsphere_server              = "10.254.252.5"
   vsphere_datacenter          = "POC-Lab"
-  dtr_fqdn                    = "dtr-csnow.ignw.local"
-  ucp_fqdn                    = "ucp-csnow.ignw.local"
+  dtr_fqdn                    = "dtr-dev.ignw.local"
+  ucp_fqdn                    = "ucp-dev.ignw.local"
 
   manager_vsphere_datastore   = "10.254.252.23_Datastore"
   manager_vsphere_cluster     = "POC"
@@ -24,7 +24,7 @@ module "dockeree-cluster" {
   worker_b_vsphere_network    = "ignw-poc|vesta-devops|servers"
   worker_b_vm_template	      = "centos7_template_dockeree_UCP316"
 
-  vsphere_folder              = "dockeree-csnow"
+  vsphere_folder              = "dockeree-dev1"
   domain                      = "ignw.io"
   manager_node_count          = "3"
   worker_a_node_count         = "2"
